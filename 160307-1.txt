@@ -1,0 +1,248 @@
+
+
+P400@G416-12 MINGW32 /
+$
+
+P400@G416-12 MINGW32 /
+$ cd ~
+
+P400@G416-12 MINGW32 ~
+$ pwd
+/c/Users/P400
+
+P400@G416-12 MINGW32 ~
+$ cd abc
+bash: cd: abc: No such file or directory
+
+P400@G416-12 MINGW32 ~
+$ cd Documents/
+
+P400@G416-12 MINGW32 ~/Documents
+$ cd abc
+
+P400@G416-12 MINGW32 ~/Documents/abc
+$ pwd
+/c/Users/P400/Documents/abc
+
+P400@G416-12 MINGW32 ~/Documents/abc
+$ cd code
+bash: cd: code: No such file or directory
+
+P400@G416-12 MINGW32 ~/Documents/abc
+$ mkdir code
+
+P400@G416-12 MINGW32 ~/Documents/abc
+$ cd code
+
+P400@G416-12 MINGW32 ~/Documents/abc/code
+$ pwd
+/c/Users/P400/Documents/abc/code
+
+P400@G416-12 MINGW32 ~/Documents/abc/code
+$ mkdir uni
+
+P400@G416-12 MINGW32 ~/Documents/abc/code
+$ cd uni
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni
+$ pwd
+/c/Users/P400/Documents/abc/code/uni
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni
+$ git status
+fatal: Not a git repository (or any of the parent direct                          ories): .git
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni
+$ git log
+fatal: Not a git repository (or any of the parent direct                          ories): .git
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni
+$ pwd
+/c/Users/P400/Documents/abc/code/uni
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni
+$ cd myrepo
+bash: cd: myrepo: No such file or directory
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni
+$ pwd
+/c/Users/P400/Documents/abc/code/uni
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni
+$ mkdir home
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni
+$ cd home
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni/home
+$ pwd
+/c/Users/P400/Documents/abc/code/uni/home
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni/home
+$ ls -l
+total 0
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni/home
+$ cd ..
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni
+$ ls -l
+total 0
+drwxr-xr-x 1 P400 197121 0 3월   7 17:23 home/
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni
+$ cd home/
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni/home
+$ git clone https://github.com/jiyoungkim0/myrepo.git
+Cloning into 'myrepo'...
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reus                          ed 0
+Unpacking objects: 100% (4/4), done.
+Checking connectivity... done.
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni/home
+$ ls -la
+total 0
+drwxr-xr-x 1 P400 197121 0 3월   7 17:24 ./
+drwxr-xr-x 1 P400 197121 0 3월   7 17:23 ../
+drwxr-xr-x 1 P400 197121 0 3월   7 17:24 myrepo/
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni/home
+$ cd myrepo/
+ls
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni/home/myrep                          o (master)
+$ ls -la
+total 6
+drwxr-xr-x 1 P400 197121   0 3월   7 17:24 ./
+drwxr-xr-x 1 P400 197121   0 3월   7 17:24 ../
+drwxr-xr-x 1 P400 197121   0 3월   7 17:24 .git/
+-rw-r--r-- 1 P400 197121 201 3월   7 17:24 .gitignore
+-rw-r--r-- 1 P400 197121   8 3월   7 17:24 README.md
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni/home/myrep                          o (master)
+$ cat README.md
+# myrepo
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni/home/myrepo (master)
+$ echo "my line" >> README.md
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni/home/myrepo (master)
+$ cat README.md
+# myrepomy line
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni/home/myrepo (master)
+$ echo "\nanother line" >> README.md
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni/home/myrepo (master)
+$ cat README.md
+# myrepomy line
+\nanother line
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni/home/myrepo (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni/home/myrepo (master)
+$ git add README.md
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory.
+git
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni/home/myrepo (master)
+$ git status
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory.
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   README.md
+
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni/home/myrepo (master)
+$ git commit -m "at home"
+[master warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory.
+9a8fc1a] at home
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory.
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni/home/myrepo (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working directory clean
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni/home/myrepo (master)
+$ git log
+commit 9a8fc1a0450f1def621fb45f9be8fdaf6aaf9947
+Author: unknown <skrth00@gmail.com>
+Date:   Mon Mar 7 17:28:51 2016 +0900
+
+    at home
+
+commit 427e81ddbc7e78fdcb417ec2eebe7ec8dd4d3e41
+Author: jiyoungkim0 <wldud2424@naver.com>
+Date:   Mon Mar 7 16:54:43 2016 +0900
+
+    Initial commit
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni/home/myrepo (master)
+$ git push origin master
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/jiyoungkim0/myrepo.git/'
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni/home/myrepo (master)
+$ cd ..
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni/home
+$ cd ..
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni
+$ pwd
+/c/Users/P400/Documents/abc/code/uni
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni
+$ ls -la
+total 0
+drwxr-xr-x 1 P400 197121 0 3월   7 17:23 ./
+drwxr-xr-x 1 P400 197121 0 3월   7 17:19 ../
+drwxr-xr-x 1 P400 197121 0 3월   7 17:24 home/
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni
+$ cd myrepo/
+bash: cd: myrepo/: No such file or directory
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni
+$ mkdir myrepo
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni
+$ cd myrepo/
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni/myrepo
+$ ls -la
+total 0
+drwxr-xr-x 1 P400 197121 0 3월   7 17:36 ./
+drwxr-xr-x 1 P400 197121 0 3월   7 17:36 ../
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni/myrepo
+$ cat README.md
+cat: README.md: No such file or directory
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni/myrepo
+$ git log
+fatal: Not a git repository (or any of the parent directories): .git
+
+P400@G416-12 MINGW32 ~/Documents/abc/code/uni/myrepo
+$

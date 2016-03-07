@@ -1,0 +1,26 @@
+echo : 따옴표 안에 있는 말을 불러줘
+git status
+git add README.md
+git status >>commit 해
+git commit -m "my first commit"(commit할 때는 파일 이름 안 써)
+(track : 형상관리
+git push origin master : url을 origin 이라고 부름 마이리포점짓 > 사용자이름, 비밀번호 넣기
+
+git log
+
+
+워킹디렉토리에 있더라도 다 형상관리하는 거 아냐
+
+git pull origin master   >>> 리드미파일에 한 줄 추가됨
+git log   >>> 3개 나옴
+echo "3rd line" >> README.md
+git add README.md
+git commit -m "third at uni"
+git push origin masster
+cat README.md
+cd ..
+cd ../home/myrepo/
+pwd
+git pull origin master
+cat README.md
+
