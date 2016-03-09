@@ -1,0 +1,6 @@
+
+cd Documents/kjy/Code/j16/myrepo
+
+dir
+
+java -cp classes;lib/aplu5.jar com.sd.turtle.TurtleDemoMain
